@@ -1,37 +1,29 @@
-import data from './utils/data.json';
+//hooks
+import { useContext } from 'react';
 
+//components
+import Navbar from './components/navbar.component';
+import Gallery from './components/gallery.component';
+import Slider from './components/slider.component';
+import Footer from './components/footer.component';
+
+//context
+import { SliderContext } from './contexts/slider.context';
+
+//css
 import './App.css';
 
 const App = () => {
-    const isImage = ['gif', 'jpg', 'jpeg', 'png'];
+    const { selectedMediaIndex } = useContext(SliderContext);
 
     return (
         <>
-            <nav className='max-w-6xl mx-auto h-15 flex items-center justify-center p-2 border-2 border-black mt-2'>
-                <h1 className='text-3xl'>Image and Video Gallery</h1>
-            </nav>
+            <Navbar />
+            <Gallery />
 
-            <main className='max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4 mt-20 p-3'>
-                {data?.map((item) => {
-                    const { id, path } = item;
-                    const fileType = path.split('.').pop();
+            {selectedMediaIndex !== null && <Slider />}
 
-                    return isImage.includes(fileType) ? (
-                        <div
-                            key={id}
-                            className='border border-black rounded-lg flex items-center justify-center p-2'
-                        >
-                            <img
-                                width={400}
-                                height={300}
-                                src={path}
-                            />
-                        </div>
-                    ) : (
-                        <div>Video</div>
-                    );
-                })}
-            </main>
+            <Footer />
         </>
     );
 };
