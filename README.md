@@ -9,10 +9,8 @@ Currently, two official plugins are available:
 
 ## Demo Snapshots
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-1.png)
-![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-2.png)
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-3.png)
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-4.png)
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-5.png)
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-7.png)
-![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-8.png)
 
