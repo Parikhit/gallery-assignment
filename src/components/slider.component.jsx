@@ -48,7 +48,7 @@ const Slider = () => {
                 </div>
             </div>
 
-            {/* Horizontal strip */}
+            {/* Horizontal strip to show below the preview */}
             <HorizontalStrip handleThumbnailClick={handleThumbnailClick} />
         </div>
     );

@@ -4,6 +4,7 @@ import { useState, useContext } from 'react';
 import { SliderContext } from '../contexts/slider.context';
 
 const Gallery = () => {
+    //adding limit to media views using More/Less button
     const [mediaCount, setMediaCount] = useState(6);
     const [clicked, setClicked] = useState(false);
 
@@ -11,6 +12,7 @@ const Gallery = () => {
 
     const handleMediaClick = (index) => setSelectedMediaIndex(index);
 
+    //Functionality for showing all media
     const handleMoreMedia = () => {
         const totalMediaCount = data.length;
 
@@ -35,6 +37,7 @@ const Gallery = () => {
                             className='relative border border-black rounded-lg flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform'
                             onClick={() => handleMediaClick(index)}
                         >
+                            {/* conditionally rendering image/video depending on the type of media */}
                             {type === 'image' ? (
                                 <img
                                     width={400}
@@ -65,6 +68,7 @@ const Gallery = () => {
                     );
                 })}
             </main>
+            {/* Control for showing more/less media items */}
             <div className='max-w-7xl mx-auto flex justify-end text-blue-800 text-lg font-medium mb-4'>
                 <button onClick={handleMoreMedia}>{clicked ? 'Less...' : 'More...'}</button>
             </div>
