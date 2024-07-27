@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
 //context
 import { SliderContext } from '../contexts/slider.context';
@@ -13,11 +13,6 @@ const Slider = () => {
     const { data, currentIndex, next, prev, setCurrentIndex, handleClosePreview } =
         useContext(SliderContext);
 
-    //State form add zoom on double-click
-    const [isZoomed, setIsZoomed] = useState(false);
-
-    const handleDoubleClick = () => setIsZoomed(!isZoomed);
-
     const handleThumbnailClick = (index) => setCurrentIndex(index);
 
     //null check for media availability.
@@ -30,31 +25,28 @@ const Slider = () => {
             <div className='relative max-w-screen-lg w-full h-4/5 bg-black flex items-center justify-center'>
                 {/* close button */}
                 <SliderButton
-                    className='absolute top-0 right-0 m-4 text-black font-semibold text-[43px] z-10 outline-none bg-gray-50'
+                    className='absolute top-0 right-0 m-4 text-black font-semibold text-[30px] sm:text-[43px] z-10 outline-none bg-gray-50'
                     handleClick={handleClosePreview}
                     name='&times;'
                 />
 
                 {/* previous button */}
                 <SliderButton
-                    className='absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl z-10'
+                    className='absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl sm:text-4xl z-10'
                     handleClick={prev}
                     name='&#10094;'
                 />
 
                 {/* next button */}
                 <SliderButton
-                    className='absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-4xl z-10'
+                    className='absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl sm:text-4xl z-10'
                     handleClick={next}
-                    name=' &#10095;'
+                    name='&#10095;'
                 />
 
                 {/* media preview */}
-                <div
-                    className='flex items-center justify-center'
-                    onDoubleClick={handleDoubleClick}
-                >
-                    <MediaContent isZoomed={isZoomed} />
+                <div className='flex items-center justify-center'>
+                    <MediaContent />
                 </div>
             </div>
 

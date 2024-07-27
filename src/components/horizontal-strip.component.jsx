@@ -38,7 +38,7 @@ const HorizontalStrip = ({ handleThumbnailClick }) => {
                         <img
                             src={item.path}
                             alt={item.alt}
-                            className='sm:w-20 sm:h-20 object-cover w-16 h-16'
+                            className='sm:w-20 sm:h-20 object-fill w-16 h-16'
                         />
                     ) : (
                         <div className='relative'>
