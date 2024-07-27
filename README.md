@@ -12,5 +12,5 @@ Currently, two official plugins are available:
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-3.png)
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-4.png)
 ![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-5.png)
-![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-7.png)
+![App Screenshot](https://github.com/Parikhit/gallery-assignment/blob/main/screenshots/Screenshot-9.png)
 
