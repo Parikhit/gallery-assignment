@@ -8,6 +8,7 @@ const Gallery = () => {
     const [mediaCount, setMediaCount] = useState(6);
     const [clicked, setClicked] = useState(false);
 
+    //using the Slider context values
     const { setSelectedMediaIndex, data } = useContext(SliderContext);
 
     const handleMediaClick = (index) => setSelectedMediaIndex(index);
@@ -25,16 +26,26 @@ const Gallery = () => {
         }
     };
 
+    //Null check if no data is available
+    {
+        !data ||
+            (data.length === 0 && (
+                <main className='max-w-7xl mx-auto flex items-center justify-center text-3xl mt-14 p-3'>
+                    <div className='text-center'>No media available</div>
+                </main>
+            ));
+    }
+
     return (
         <>
             <main className='max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4 mt-14 p-3'>
                 {data?.slice(0, mediaCount).map((item, index) => {
-                    const { id, type, path, alt } = item;
+                    const { id, type, path, alt, poster } = item;
 
                     return (
                         <div
                             key={id}
-                            className='relative border border-black rounded-lg flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform'
+                            className='relative border-2 border-black rounded-lg flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform'
                             onClick={() => handleMediaClick(index)}
                         >
                             {/* conditionally rendering image/video depending on the type of media */}
@@ -47,7 +58,10 @@ const Gallery = () => {
                                 />
                             ) : (
                                 <>
-                                    <video className='relative w-full h-auto'>
+                                    <video
+                                        poster={poster}
+                                        className='relative w-full h-auto'
+                                    >
                                         <source
                                             src={path}
                                             type='video/mp4'

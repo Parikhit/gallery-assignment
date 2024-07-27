@@ -15,7 +15,8 @@
         "id": 2,
         "type": "video",
         "path": "./assets/video1.mp4",
-        "alt": "Video-1"
+        "alt": "Video-1",
+        "poster": "./assets/video1-poster.png"
     },
     {
         "id": 3,
@@ -27,13 +28,15 @@
         "id": 4,
         "type": "video",
         "path": "./assets/video2.mp4",
-        "alt": "Video-2"
+        "alt": "Video-2",
+        "poster": "./assets/video2-poster.png"
     },
     {
         "id": 5,
         "type": "video",
         "path": "./assets/video3.mp4",
-        "alt": "Video-3"
+        "alt": "Video-3",
+        "poster": "./assets/video3-poster.png"
     },
     {
         "id": 6,
@@ -57,7 +60,8 @@
         "id": 9,
         "type": "video",
         "path": "./assets/video4.mp4",
-        "alt": "Video-4"
+        "alt": "Video-4",
+        "poster": "./assets/video4-poster.png"
     },
     {
         "id": 10,

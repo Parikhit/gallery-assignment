@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 
 //context
 import { SliderContext } from '../contexts/slider.context';
@@ -9,11 +9,17 @@ import SliderButton from './slider-button.component';
 import HorizontalStrip from './horizontal-strip.component';
 
 const Slider = () => {
+    //Using slider context values
     const { data, currentIndex, next, prev, setCurrentIndex, handleClosePreview } =
         useContext(SliderContext);
 
+    const [isZoomed, setIsZoomed] = useState(false);
+
+    const handleDoubleClick = () => setIsZoomed(!isZoomed);
+
     const handleThumbnailClick = (index) => setCurrentIndex(index);
 
+    //null check for media availability.
     if (!data || data.length === 0 || !data[currentIndex]) {
         return null;
     }
@@ -23,28 +29,31 @@ const Slider = () => {
             <div className='relative max-w-screen-lg w-full h-4/5 bg-black flex items-center justify-center'>
                 {/* close button */}
                 <SliderButton
-                    className='absolute top-0 right-0 m-4 text-gray-100 text-5xl z-10 opacity-90'
+                    className='absolute top-0 right-0 m-4 text-black font-semibold text-[43px] z-10 outline-none bg-gray-50'
                     handleClick={handleClosePreview}
                     name='&times;'
                 />
 
                 {/* previous button */}
                 <SliderButton
-                    className='absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-5xl z-10 opacity-70'
+                    className='absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl z-10'
                     handleClick={prev}
                     name='&#10094;'
                 />
 
                 {/* next button */}
                 <SliderButton
-                    className='absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-5xl z-10 opacity-70'
+                    className='absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-4xl z-10'
                     handleClick={next}
                     name=' &#10095;'
                 />
 
                 {/* media preview */}
-                <div className='flex items-center justify-center'>
-                    <MediaContent />
+                <div
+                    className='flex items-center justify-center'
+                    onDoubleClick={handleDoubleClick}
+                >
+                    <MediaContent isZoomed={isZoomed} />
                 </div>
             </div>
 
