@@ -26,7 +26,7 @@ const Slider = () => {
     }
 
     return (
-        <div className='fixed inset-0 bg-black bg-opacity-75 flex flex-col  items-center justify-center z-50'>
+        <div className='fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center z-50 sm:gap-14'>
             <div className='relative max-w-screen-lg w-full h-4/5 bg-black flex items-center justify-center'>
                 {/* close button */}
                 <SliderButton

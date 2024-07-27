@@ -24,7 +24,7 @@ const HorizontalStrip = ({ handleThumbnailClick }) => {
     }, [currentIndex]);
 
     return (
-        <div className='mt-4 flex items-center sm:justify-center mx-auto overflow-x-auto space-x-2 w-4/5 no-scrollbar'>
+        <div className='mt-3 flex items-center sm:justify-center mx-auto overflow-x-auto space-x-2 w-4/5 no-scrollbar'>
             {data.map((item, index) => (
                 <div
                     key={index}
