@@ -84,7 +84,12 @@ const Gallery = () => {
             </main>
             {/* Control for showing more/less media items */}
             <div className='max-w-7xl mx-auto flex justify-end text-blue-800 text-lg font-medium mb-4'>
-                <button onClick={handleMoreMedia}>{clicked ? 'Less...' : 'More...'}</button>
+                <button
+                    className='mr-4'
+                    onClick={handleMoreMedia}
+                >
+                    {clicked ? 'Less...' : 'More...'}
+                </button>
             </div>
         </>
     );
