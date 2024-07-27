@@ -58,7 +58,7 @@ const Gallery = () => {
                                             className='text-gray-200 text-5xl'
                                             width={80}
                                             height={80}
-                                            src='src/assets/play.svg'
+                                            src='./assets/play.svg'
                                             alt='play-button'
                                         />
                                     </div>
