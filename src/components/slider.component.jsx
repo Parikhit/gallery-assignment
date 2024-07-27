@@ -13,6 +13,7 @@ const Slider = () => {
     const { data, currentIndex, next, prev, setCurrentIndex, handleClosePreview } =
         useContext(SliderContext);
 
+    //State form add zoom on double-click
     const [isZoomed, setIsZoomed] = useState(false);
 
     const handleDoubleClick = () => setIsZoomed(!isZoomed);
