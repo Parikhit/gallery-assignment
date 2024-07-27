@@ -2,73 +2,73 @@
     {
         "id": 0,
         "type": "image",
-        "path": "src/assets/pexels-creativebin-38994-135940.jpg",
+        "path": "./src/assets/pexels-creativebin-38994-135940.jpg",
         "alt": "Image-1"
     },
     {
         "id": 1,
         "type": "image",
-        "path": "src/assets/pexels-jan-krnc-268225-1043458.jpg",
+        "path": "./src/assets/pexels-jan-krnc-268225-1043458.jpg",
         "alt": "Image-2"
     },
     {
         "id": 2,
         "type": "video",
-        "path": "src/assets/video1.mp4",
+        "path": "./src/assets/video1.mp4",
         "alt": "Video-1"
     },
     {
         "id": 3,
         "type": "image",
-        "path": "src/assets/pexels-pixabay-45855355.jpg",
+        "path": "./src/assets/pexels-pixabay-45855355.jpg",
         "alt": "Image-3"
     },
     {
         "id": 4,
         "type": "video",
-        "path": "src/assets/video2.mp4",
+        "path": "./src/assets/video2.mp4",
         "alt": "Video-2"
     },
     {
         "id": 5,
         "type": "video",
-        "path": "src/assets/video3.mp4",
+        "path": "./src/assets/video3.mp4",
         "alt": "Video-3"
     },
     {
         "id": 6,
         "type": "image",
-        "path": "src/assets/pexels-pixabay-30282045.jpg",
+        "path": "./src/assets/pexels-pixabay-30282045.jpg",
         "alt": "Image-4"
     },
     {
         "id": 7,
         "type": "image",
-        "path": "src/assets/pexels-samandgos-709552.jpg",
+        "path": "./src/assets/pexels-samandgos-709552.jpg",
         "alt": "Image-5"
     },
     {
         "id": 8,
         "type": "image",
-        "path": "src/assets/pexels-suzyhazelwood-1480347.jpg",
+        "path": "./src/assets/pexels-suzyhazelwood-1480347.jpg",
         "alt": "Image-6"
     },
     {
         "id": 9,
         "type": "video",
-        "path": "src/assets/video4.mp4",
+        "path": "./src/assets/video4.mp4",
         "alt": "Video-4"
     },
     {
         "id": 10,
         "type": "image",
-        "path": "src/assets/pexels-mikebirdy-126271.jpg",
+        "path": "./src/assets/pexels-mikebirdy-126271.jpg",
         "alt": "Image-7"
     },
     {
         "id": 11,
         "type": "image",
-        "path": "src/assets/pexels-binyaminmellish-106399.jpg",
+        "path": "./src/assets/pexels-binyaminmellish-106399.jpg",
         "alt": "Image-8"
     }
 ]
